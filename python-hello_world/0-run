@@ -1,2 +1,2 @@
 #!/bin/bash
-python $man.py
+cat $PYFILE | python3
