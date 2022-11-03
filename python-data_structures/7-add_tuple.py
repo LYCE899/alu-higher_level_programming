@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-add_tuple = __import__('7-add_tuple').add_tuple
+def add_tuple(tuple_a=(), tuple_b=()):
+    
+    a = len(tuple_a)
+    b = len(tuple_b)
 
-tuple_a = (1, 89)
-tuple_b = (88, 11)
-new_tuple = add_tuple(tuple_a, tuple_b)
-print(new_tuple)
+    sums = ((tuple_a[0] if a > 0 else 0) + (tuple_b[0] if b > 0 else 0),
+            (tuple_a[1] if a > 1 else 0) + (tuple_b[1] if b > 1 else 0))
 
-print(add_tuple(tuple_a, (1, )))
-print(add_tuple(tuple_a, ()))
+    return sums
