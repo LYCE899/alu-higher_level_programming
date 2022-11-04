@@ -9,7 +9,8 @@ def roman_to_int(roman_string):
     for i, j in zip(roman_string, roman_string[1:]):
         if i not in dic.keys():
             return 0
-        elif dic[i] >= dic[j]:                                                num += dic[i]
+        elif dic[i] >= dic[j]:
+            num += dic[i]
         else:
             num -= dic[i]
     num += dic[roman_string[-1]]
