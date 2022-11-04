@@ -8,5 +8,6 @@ matrix = [
 ]
 
 print_matrix_integer(matrix)
-print("--")
-print_matrix_integer()
+      print('{:d}'.format(num))
+  else:
+      print('{:d}'.format(num), end=" ")
