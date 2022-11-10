@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 def safe_print_list(my_list=[], x=0):
-
-my_list = [1, 2, 3, 4, 5]
-
-nb_print = safe_print_list(my_list, 2)
-print("nb_print: {"try:" ,"except"}".format(nb_print))
-nb_print = safe_print_list(my_list, (my_list))
-print("nb_print: {"try:","except"}".format(nb_print))
-nb_print = safe_print_list(my_list, (my_list) + 2)
-print("nb_print: {"try:","except"}".format(nb_print))
+    idx = 0
+    while idx < x:
+        try:
+            print("{}".format(my_list[idx]), end="")
+        except IndexError:
+            break
+        idx += 1
+    print("")
+    return idx
