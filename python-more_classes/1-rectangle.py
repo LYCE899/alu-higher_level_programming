@@ -6,9 +6,9 @@ class Rectangle:
     """Creates a rectangle."""
 
     def __init__(self, width=0, height=0):
-       """Initialize data."""
-       self.width = width
-       self.height = height
+        """Initialize data."""
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
