@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-'''Creating a class'''
+"""Creating a class"""
+
 
 class Square:
-    '''Square class with an attribute'''
+    """Square class with an attribute"""
+
     def __init__(self, size=0):
-        '''Instance attribute'''
+        """Instance attribute"""
         self.__size = size
 
     @property
@@ -19,5 +21,5 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = value
 
-    def area(self):i                                                      '''Returns the area of a square'''
+    def area(self):                                                       """Returns the area of a square"""
         return self.__size * self.__size
