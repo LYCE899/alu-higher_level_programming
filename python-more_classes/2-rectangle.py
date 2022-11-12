@@ -1,7 +1,9 @@
 #!/usr/bin/python3
-"""Module 2-rectangle
+"""
+Module 2-rectangle
 Contains class Rectangle with private attribute width and height,
-and public area and perimeter methods"""
+and public area and perimeter methods
+"""
 
 
 class Rectangle:
@@ -10,7 +12,7 @@ class Rectangle:
     Args:
         width (int): width
         height (int): height
-        Functions:
+    Functions:
         __init__(self, width, height)
         width(self)
         width(self, value)
