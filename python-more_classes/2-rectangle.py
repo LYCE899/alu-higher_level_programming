@@ -44,7 +44,7 @@ class Rectangle:
     def height(self):
         """ Getter returns height """
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         """ Setter sets height if int > 0 """
@@ -63,4 +63,3 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return 0
         return (2 * self.__width) + (2 * self.height)
-    
