@@ -15,8 +15,8 @@ class Rectangle:
     Functions:
         __init__(self, width, height)
         width(self)
-        width(self, value)
-        height(self)
+       width(self, value)
+        eight(self)
         height(self, value)
         area(self)
         perimeter(self)
