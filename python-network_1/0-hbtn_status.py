@@ -1,24 +1,19 @@
-
-dule 0-hbtn_status.py
-
+#!/usr/bin/python3
 """
-
-
+Module 0-hbtn_status.py
+"""
 
 import urllib.request
 
-
-
 if __name__ == "__main__":
+    with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
 
-        with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
+                    html = response.read()
 
-                html = response.read()
+                            print('Body response:')
 
-                        print('Body response:')
+                                    print("\t- type: {}".format(type(html)))
 
-                                print("\t- type: {}".format(type(html)))
+                                            print("\t- content: {}".format(html))
 
-                                        print("\t- content: {}".format(html))
-
-                                                print("\t- utf8 content: {}".format(html.decode('utf-8')))
+                                                    print("\t- utf8 content: {}".format(html.decode('utf-8')))
