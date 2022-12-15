@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 """0-select_states.py"""
 
 
