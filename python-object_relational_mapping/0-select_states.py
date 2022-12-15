@@ -1,25 +1,9 @@
-#!/usr/bin/python3
-"""
-return all table values (table 'states')
-parameters given to script: username, password, database
-"""
-
-import MySQLdb
-from sys import argv
-
-if __name__ == "__main__":
-
-    # connect to database
-    db = MySQLdb.connect(host="localhost",
-                         port=3306,
-                         user=argv[1],
-                         passwd=argv[2],
-                         db=argv[3])
-
-    # create cursor to exec queries using SQL
-    cursor = db.cursor()
-    cursor.execute("SELECT * FROM states ORDER BY id ASC")
-    for row in cursor.fetchall():
-        print(row)
-    cursor.close()
-    db.close()
+-- Create states table in hbtn_0e_0_usa with some data
+CREATE DATABASE IF NOT EXISTS hbtn_0e_0_usa;
+USE hbtn_0e_0_usa;
+CREATE TABLE IF NOT EXISTS states ( 
+    id INT NOT NULL AUTO_INCREMENT, 
+    name VARCHAR(256) NOT NULL,
+    PRIMARY KEY (id)
+);
+INSERT INTO states (name) VALUES ("California"), ("Arizona"), ("Texas"), ("New York"), ("Nevada");
