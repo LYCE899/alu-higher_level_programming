@@ -1,19 +1,45 @@
 #!/usr/bin/python3
-""" 11-model_state_insert.py """
+
+"""A script that adds the State object “Louisiana” to database"""
+
+
+
+
+
+import sys
+
+from model_state import Base, State
+
+from sqlalchemy.orm import sessionmaker
+
+from sqlalchemy import create_engine
+
+
+
 
 
 if __name__ == "__main__":
-    from sys import argv
-    from model_state import State, Base
-    from sqlalchemy import create_engine
-    from sqlalchemy.orm import sessionmaker
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
-        argv[1], argv[2], argv[3]), pool_pre_ping=True)
-    Session = sessionmaker()
-    session = Session(bind=engine)
-    Base.metadata.create_all(engine)
-    st = State(name="Louisiana")
-    session.add(st)
-    session.commit()
-    print(st.id)
-    session.close()
+
+        engine = create_engine("mysql+mysqldb://{}:{}@localhost/{}"
+
+                                           .format(sys.argv[1], sys.argv[2], sys.argv[3]),
+
+                                                                      pool_pre_ping=True)
+
+            Session = sessionmaker(bind=engine)
+
+                session = Session()
+
+                    Base.metadata.create_all(engine)
+
+
+
+                        state = State(name="Louisiana")
+
+                            session.add(state)
+
+                                session.commit()
+
+                                    print(state.id)
+
+                                        session.close()
