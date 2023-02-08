@@ -1,11 +1,16 @@
 #!/usr/bin/node
-const nm = parseInt(process.argv[2]);
-if (nm) {
-  for (let i = 0; i < nm; i++) {
-    console.log('X'.repeat(nm));
+function square () {
+  const n = parseInt(process.argv[2]);
+  if (n) {
+    for (let i = 0; i < n; i++) {
+      if (n > 0) {
+        console.log('X'.repeat(n));
+      } else {
+        break;
+      }
+    }
+  } else {
+    console.log('Missing size');
   }
-} else if (nm < 0) {
-  console.log();
-} else {
-  console.log('Missing size');
 }
+square.call();
